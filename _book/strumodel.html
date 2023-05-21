@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 结构模型 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析</title>
+  <meta name="description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 结构模型 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 结构模型 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析" />
+  
+  <meta name="twitter:description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  
+
+<meta name="author" content="黄国政、黄婉岚、肖奕、李晓琳、林彦捷、朱雨彤" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="obsmodel.html"/>
+<link rel="next" href="mediator.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="usage.html"><a href="usage.html"><i class="fa fa-check"></i><b>1</b> 数据概况</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="usage.html"><a href="usage.html#usage-ins"><i class="fa fa-check"></i><b>1.1</b> 数据预处理</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="usage.html"><a href="usage.html#usage-ons"><i class="fa fa-check"></i><b>1.1.1</b> 变量选取与缺失值处理</a></li>
+<li class="chapter" data-level="1.1.2" data-path="usage.html"><a href="usage.html#usage-pns"><i class="fa fa-check"></i><b>1.1.2</b> 数据概况</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="usage.html"><a href="usage.html#usage-writing"><i class="fa fa-check"></i><b>1.2</b> 描述统计</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="usage.html"><a href="usage.html#usage-writing1"><i class="fa fa-check"></i><b>1.2.1</b> 官方媒体</a></li>
+<li class="chapter" data-level="1.2.2" data-path="usage.html"><a href="usage.html#usage-writing2"><i class="fa fa-check"></i><b>1.2.2</b> 规则型人格</a></li>
+<li class="chapter" data-level="1.2.3" data-path="usage.html"><a href="usage.html#usage-writing3"><i class="fa fa-check"></i><b>1.2.3</b> 威权观念</a></li>
+<li class="chapter" data-level="1.2.4" data-path="usage.html"><a href="usage.html#usage_writing4"><i class="fa fa-check"></i><b>1.2.4</b> 民族主义</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="obsmodel.html"><a href="obsmodel.html"><i class="fa fa-check"></i><b>2</b> 测量模型</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-intro"><i class="fa fa-check"></i><b>2.1</b> 信度检验</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-standar"><i class="fa fa-check"></i><b>2.1.1</b> 参考标准</a></li>
+<li class="chapter" data-level="2.1.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-situation"><i class="fa fa-check"></i><b>2.1.2</b> 测量模型状况</a></li>
+<li class="chapter" data-level="2.1.3" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-summary"><i class="fa fa-check"></i><b>2.1.3</b> 信度汇总</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-def"><i class="fa fa-check"></i><b>2.2</b> 效度检验</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defa"><i class="fa fa-check"></i><b>2.2.1</b> 收敛效度</a></li>
+<li class="chapter" data-level="2.2.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defb"><i class="fa fa-check"></i><b>2.2.2</b> 潜变量（因子）间相关性</a></li>
+<li class="chapter" data-level="2.2.3" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defc"><i class="fa fa-check"></i><b>2.2.3</b> 区别效度</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="strumodel.html"><a href="strumodel.html"><i class="fa fa-check"></i><b>3</b> 结构模型</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="strumodel.html"><a href="strumodel.html#strumodel-one"><i class="fa fa-check"></i><b>3.1</b> 研究假设</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="strumodel.html"><a href="strumodel.html#hypothesis1"><i class="fa fa-check"></i><b>3.1.1</b> 假设1</a></li>
+<li class="chapter" data-level="3.1.2" data-path="strumodel.html"><a href="strumodel.html#hypothesis2"><i class="fa fa-check"></i><b>3.1.2</b> 假设2</a></li>
+<li class="chapter" data-level="3.1.3" data-path="strumodel.html"><a href="strumodel.html#hypothesis3"><i class="fa fa-check"></i><b>3.1.3</b> 假设3</a></li>
+<li class="chapter" data-level="3.1.4" data-path="strumodel.html"><a href="strumodel.html#hypothesis4"><i class="fa fa-check"></i><b>3.1.4</b> 假设4</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="strumodel.html"><a href="strumodel.html#strumodel-xxx"><i class="fa fa-check"></i><b>3.2</b> 理论视角</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="strumodel.html"><a href="strumodel.html#strumodel-xxy"><i class="fa fa-check"></i><b>3.2.1</b> 文献综述</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="strumodel.html"><a href="strumodel.html#strumodel-two"><i class="fa fa-check"></i><b>3.3</b> 模型建构</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="mediator.html"><a href="mediator.html"><i class="fa fa-check"></i><b>4</b> 中介效果检验</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="mediator.html"><a href="mediator.html#mediator-station"><i class="fa fa-check"></i><b>4.1</b> 远程中介的效果检验</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="mediator.html"><a href="mediator.html#mediator-method"><i class="fa fa-check"></i><b>4.1.1</b> 操作</a></li>
+<li class="chapter" data-level="4.1.2" data-path="mediator.html"><a href="mediator.html#mediator-state"><i class="fa fa-check"></i><b>4.1.2</b> 解读</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="讨论与反思.html"><a href="讨论与反思.html"><i class="fa fa-check"></i>讨论与反思</a>
+<ul>
+<li class="chapter" data-level="4.2" data-path="讨论与反思.html"><a href="讨论与反思.html#counee"><i class="fa fa-check"></i><b>4.2</b> 国家治理</a>
+<ul>
+<li class="chapter" data-level="" data-path="讨论与反思.html"><a href="讨论与反思.html#国家的话语权力与个人自由意识"><i class="fa fa-check"></i>国家的话语权力与个人自由意识</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">官方媒体话语下的民族主义形成机制——基于Amos的实证分析</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="strumodel" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> 结构模型<a href="strumodel.html#strumodel" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="strumodel-one" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> 研究假设<a href="strumodel.html#strumodel-one" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>测量模型通过以后，以<strong>“官方媒体”</strong>作为自变量，<strong>“规则型人格”</strong>与<strong>“威权观念”</strong>作为中介变量，<strong>“民族主义”</strong>作为因变量，我们提出以下四点假设。</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li><strong>官方媒体的使用对民族主义的形成具有促进作用。</strong></li>
+<li><strong>官方媒体的使用会塑造规则型人格，进而促进民族主义的形成。</strong></li>
+<li><strong>官方媒体的使用会加强威权观念，进而促进民族主义的形成。</strong></li>
+<li><strong>官方媒体的使用会塑造规则型人格，规则型人格更容易形成威权观念，最终促进民族主义的形成</strong></li>
+</ol>
+</blockquote>
+<p>若假设1与假设4成立，可构建从<strong>“官方媒体”</strong>到<strong>“民族主义”</strong>的远程中介（链式中介），下面将逐一对四个假设进行检验。
+由于最终需要构建具有中介的结构方程模型，故做出以下补充：</p>
+<blockquote>
+<ul>
+<li>在假设2中还会检验“官方媒体”对“规则型人格”的直接影响和“规则型人格”对“民族主义”的直接影响。</li>
+<li>在假设3中还会检验“官方媒体”对“威权观念”的直接影响”和“威权观念”对“民族主义”的直接影响。</li>
+<li>在假设4中还会检验“规则型人格”对“威权观念”的直接影响。</li>
+</ul>
+</blockquote>
+<p>以下检验只看变量之间的影响是否具有显著性，中介效果检验见下一章。</p>
+<div id="hypothesis1" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> 假设1<a href="strumodel.html#hypothesis1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="a.官方媒体-民族主义" class="section level4 unnumbered hasAnchor">
+<h4>A.“官方媒体”-“民族主义”<a href="strumodel.html#a.官方媒体-民族主义" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="strumodel.html#cb14-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis1.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="picture/hypothesis1.png" alt="officalmedia-nationalism" width="793" />
+<p class="caption">
+图2.1: officalmedia-nationalism
+</p>
+</div>
+<p><strong>“官方媒体”对“民族主义”有显著的正向影响。</strong></p>
+<blockquote>
+<p><strong>假设1通过</strong></p>
+</blockquote>
+</div>
+</div>
+<div id="hypothesis2" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> 假设2<a href="strumodel.html#hypothesis2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>假设2验证3条路径的显著性，先验证直接的2条路径，再验证含有中介的1条路径（假设2本身）。</p>
+</blockquote>
+<div id="b.官方媒体-规则型人格" class="section level4 unnumbered hasAnchor">
+<h4>B.“官方媒体”-“规则型人格”<a href="strumodel.html#b.官方媒体-规则型人格" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="strumodel.html#cb15-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis2_1.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="picture/hypothesis2_1.png" alt="officalmedia-Obedient personality" width="823" />
+<p class="caption">
+图1.1: officalmedia-Obedient personality
+</p>
+</div>
+<p><strong>“官方媒体”对“规则型人格”具有显著的正向影响作用。</strong></p>
+</div>
+<div id="c.规则型人格-民族主义" class="section level4 unnumbered hasAnchor">
+<h4>C.“规则型人格”-“民族主义”<a href="strumodel.html#c.规则型人格-民族主义" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="strumodel.html#cb16-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis2_2.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="picture/hypothesis2_2.png" alt="Obedient-nationalism" width="802" />
+<p class="caption">
+图2.2: Obedient-nationalism
+</p>
+</div>
+<p><strong>“官方媒体”对“规则型人格”具有显著的正向影响作用。</strong></p>
+</div>
+<div id="d.官方媒体-规则型人格-民族主义bookstrap500095" class="section level4 unnumbered hasAnchor">
+<h4>D.“官方媒体”-“规则型人格”-“民族主义”，<strong>(Bookstrap:5000,95%)</strong><a href="strumodel.html#d.官方媒体-规则型人格-民族主义bookstrap500095" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="strumodel.html#cb17-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis2_3.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="picture/hypothesis2_3.png" alt="officalmedia-Obedient personality-nationalism" width="904" />
+<p class="caption">
+图2.3: officalmedia-Obedient personality-nationalism
+</p>
+</div>
+<p><strong>“官方媒体”经过“规则型人格”后，对“民族主义”具有显著的正向影响作用。</strong></p>
+<blockquote>
+<p><strong>假设2通过</strong></p>
+</blockquote>
+</div>
+</div>
+<div id="hypothesis3" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> 假设3<a href="strumodel.html#hypothesis3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>假设3同样验证3条路径的显著性，先验证直接的2条路径，再验证含有中介的1条路径（假设3本身）。</p>
+</blockquote>
+<div id="e.官方媒体-威权观念" class="section level4 unnumbered hasAnchor">
+<h4>E.“官方媒体”-“威权观念”<a href="strumodel.html#e.官方媒体-威权观念" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="strumodel.html#cb18-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis3_1.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="picture/hypothesis3_1.png" alt="officalmedia-authoritarianism" width="855" />
+<p class="caption">
+图2.4: officalmedia-authoritarianism
+</p>
+</div>
+<p><strong>“官方媒体”对“威权观念”具有显著的正向影响作用。</strong></p>
+</div>
+<div id="f.威权观念-民族主义" class="section level4 unnumbered hasAnchor">
+<h4>F.“威权观念”-“民族主义”<a href="strumodel.html#f.威权观念-民族主义" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="strumodel.html#cb19-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis3_2.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="picture/hypothesis3_2.png" alt="authoritarianism-nationalism" width="825" />
+<p class="caption">
+图2.5: authoritarianism-nationalism
+</p>
+</div>
+<p><strong>“威权观念”对“民族主义”具有显著的正向影响作用。</strong></p>
+</div>
+<div id="g.官方媒体-威权观念-民族主义bookstrap500095" class="section level4 unnumbered hasAnchor">
+<h4>G.“官方媒体”-“威权观念”-“民族主义”，<strong>(Bookstrap:5000,95%)</strong><a href="strumodel.html#g.官方媒体-威权观念-民族主义bookstrap500095" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="strumodel.html#cb20-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis3_3.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="picture/hypothesis3_3.png" alt="officalmedia-authoritarianism-nationalism" width="858" />
+<p class="caption">
+图2.6: officalmedia-authoritarianism-nationalism
+</p>
+</div>
+<p><strong>“官方媒体”经过“威权观念”后，对“民族主义”具有显著的正向影响作用。</strong></p>
+<blockquote>
+<p><strong>假设3通过</strong></p>
+</blockquote>
+</div>
+</div>
+<div id="hypothesis4" class="section level3 hasAnchor" number="3.1.4">
+<h3><span class="header-section-number">3.1.4</span> 假设4<a href="strumodel.html#hypothesis4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<blockquote>
+<p>假设4先验证“规则型人格”对“威权观念”的影响显著性，接着验证远程中介路径“官方媒体”-“规则型人格”-“威权人格”-“民族主义”路径的显著性。</p>
+</blockquote>
+<div id="h.规则型人格-威权观念" class="section level4 unnumbered hasAnchor">
+<h4>H.“规则型人格”-“威权观念”<a href="strumodel.html#h.规则型人格-威权观念" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="strumodel.html#cb21-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis4_1.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="picture/hypothesis4_1.png" alt="Obedient personality-authoritarianism" width="797" />
+<p class="caption">
+图2.7: Obedient personality-authoritarianism
+</p>
+</div>
+<p><strong>“规则型人格”对“威权观念”具有显著的正向影响作用。</strong></p>
+</div>
+<div id="i.官方媒体-规则型人格-威权观念-民族主义bookstrap500095" class="section level4 unnumbered hasAnchor">
+<h4>I.“官方媒体”-“规则型人格”-“威权观念”-“民族主义”，<strong>(Bookstrap:5000,95%)</strong><a href="strumodel.html#i.官方媒体-规则型人格-威权观念-民族主义bookstrap500095" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="strumodel.html#cb22-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/hypothesis4_2.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="picture/hypothesis4_2.png" alt="officalmedia-Obedient personality-authoritarianism-nationalism" width="948" />
+<p class="caption">
+图3.1: officalmedia-Obedient personality-authoritarianism-nationalism
+</p>
+</div>
+<p><strong>“官方媒体”影响“规则型人格”，进而影响“威权观念”，最后影响“民族主义”的路径是显著的。</strong></p>
+<blockquote>
+<p><strong>假设4通过</strong></p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="strumodel-xxx" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> 理论视角<a href="strumodel.html#strumodel-xxx" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="strumodel-xxy" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> 文献综述<a href="strumodel.html#strumodel-xxy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>根据我们的研究思路与所选变量，确定研究对象为“民族主义”，研究内容是“民族主义”在官方媒体话语与宣传的作用下的形成机制，研究的目的在于验证民族主义是否由官方媒体塑造，并分析在官方媒体话语宣传到民族主义的形成过程中存在的相关影响因素，例如官方对公众自上而下的意识规训，公众在与国家的对话中如何被塑造成期望的合格公民，最后反思国家治理中话语的权力渗透与国民意识形成的关系。基于此，我们对前人的研究进行了相关梳理。</p>
+<p>在国家形象与国家权威塑造方面，马得勇、陆屹洲（2022）对于国家形象的心理分析，重点考察了美国受访者对中国好感度和中国受访者对美国好感度及其影响因素,同时也分析了两国受访者对日本、俄罗斯、朝鲜三个重要国家的好感度,从而分析这三国的国家形象及影响因素。研究结果表明,虽然媒体信息接触、政治知识或信 息储备对个体有一定的影响,但国家形象仍然具有稳定的、差异化的政治心理基础。特别地,个体的基本政治认知图式会和国家形象产生明显的匹配效应,即偏爱集体主义/个人主义价值的民众会更喜欢崇尚集体主义/个人主义的国家。</p>
+<p>在宏观民族主义研究方面，秦在东、陶丽（2023）对于我国网络民族主义的研究探索从“民族主义网络化”到“网络民 族主义”的历程；王坚方（2001）分析了信息网络时代下，文化帝国主义与民族主义之间的博弈，提出“文化自觉需要理性的反文化”，“要善于利用和合思想化解价值冲突”的观点；周明（2002）在论述“原始黑 客精神”时谈到“中国黑客有着较为浓烈的民族主义色彩”，其中还罗列了中国黑客曾经参与过的一些重大的网络民族主义事件，同时指出黑客往往与极端民族主义活动相联系。</p>
+<p>在微观民族主义研究方面，卜建华（2008–2018）从思想政治教育学科的角度分别论述了中国网络民族主义的思想政治教育功能、意识形态功能、政治参与功能，对青年政治社会化的影响、对中国外交的影响，以及对极端网络民族主义倾向与行为的批判，并对青年学生参与网络民族主义的参与方式与疏导策略进行了论述。在网络民族主义与国家权威联系来看，卜建华（2012）认为中国网络民族主义的积极影响在于有利于在全球化浪潮中维护国家利益，促成民族的发展，有利于经济发展和社会进步；消极影响在于网络民族主义一旦偏激，容易走向极端或不理性的沙文民族主义，甚至会在全球引发动荡不安，导致种族冲突、种族灭绝的历史性悲剧；葛素华认为其积极影响主要表现在增强民族凝聚力和向心力进而维护国家安全、提升民众政治参与度进而推动民主化进程、维护民族利益和国家形象上，而消极影响则体现在极端偏激的网络民族主义可能给主流意识形态安全、社会稳定与政治安全以及我国的国际形象带来不小的挑战。</p>
+<p>本研究受马得勇教授《信息接触、威权人格、意识形态与网络民族主义—————中国网民政治态度形成机制分析》文章启发，基于实证数据的分析，发现既有研究往往在数据分析的过程中忽视了变量间的共线性与相关统计学规律，预设的理论导向过强，与根据数据建构的模型差异较为明显。在前人研究的理论基础上，我们根据模型要求对变量的选取和关系建构进行了进一步的调整。</p>
+</div>
+</div>
+<div id="strumodel-two" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> 模型建构<a href="strumodel.html#strumodel-two" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>通过四个假设以后以及各路径的显著性检验后，接下来进行远程中介（链式中介）模型的建构，验证“官方媒体-规则型人格-威权观念-民族主义”这一远程中介路径是否显著存在。</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="strumodel.html#cb23-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/SEM.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="picture/SEM.png" alt="SEM" width="1016" />
+<p class="caption">
+图3.2: SEM
+</p>
+</div>
+<p><strong>模型的卡方自由比为8.737，Rmsea为0.060，GFI为0.954，AGFI为0.934，绝对适配度总体符合要求。</strong></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="strumodel.html#cb24-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/SEM_P.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
+<img src="picture/SEM_P.png" alt="p" width="582" />
+<p class="caption">
+图3.3: p
+</p>
+</div>
+<p><strong>模型中各路径系数显著，且方差、残差不为负，因子间不存在共线性，整体模型符合要求。</strong></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="obsmodel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mediator.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
