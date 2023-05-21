@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 数据概况 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析</title>
+  <meta name="description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 数据概况 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 数据概况 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析" />
+  
+  <meta name="twitter:description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  
+
+<meta name="author" content="黄国政、黄婉岚、肖奕、李晓琳、林彦捷、朱雨彤" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="obsmodel.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="usage.html"><a href="usage.html"><i class="fa fa-check"></i><b>1</b> 数据概况</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="usage.html"><a href="usage.html#usage-ins"><i class="fa fa-check"></i><b>1.1</b> 数据预处理</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="usage.html"><a href="usage.html#usage-ons"><i class="fa fa-check"></i><b>1.1.1</b> 变量选取与缺失值处理</a></li>
+<li class="chapter" data-level="1.1.2" data-path="usage.html"><a href="usage.html#usage-pns"><i class="fa fa-check"></i><b>1.1.2</b> 数据概况</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="usage.html"><a href="usage.html#usage-writing"><i class="fa fa-check"></i><b>1.2</b> 描述统计</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="usage.html"><a href="usage.html#usage-writing1"><i class="fa fa-check"></i><b>1.2.1</b> 官方媒体</a></li>
+<li class="chapter" data-level="1.2.2" data-path="usage.html"><a href="usage.html#usage-writing2"><i class="fa fa-check"></i><b>1.2.2</b> 规则型人格</a></li>
+<li class="chapter" data-level="1.2.3" data-path="usage.html"><a href="usage.html#usage-writing3"><i class="fa fa-check"></i><b>1.2.3</b> 威权观念</a></li>
+<li class="chapter" data-level="1.2.4" data-path="usage.html"><a href="usage.html#usage_writing4"><i class="fa fa-check"></i><b>1.2.4</b> 民族主义</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="obsmodel.html"><a href="obsmodel.html"><i class="fa fa-check"></i><b>2</b> 测量模型</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-intro"><i class="fa fa-check"></i><b>2.1</b> 信度检验</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-standar"><i class="fa fa-check"></i><b>2.1.1</b> 参考标准</a></li>
+<li class="chapter" data-level="2.1.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-situation"><i class="fa fa-check"></i><b>2.1.2</b> 测量模型状况</a></li>
+<li class="chapter" data-level="2.1.3" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-summary"><i class="fa fa-check"></i><b>2.1.3</b> 信度汇总</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-def"><i class="fa fa-check"></i><b>2.2</b> 效度检验</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defa"><i class="fa fa-check"></i><b>2.2.1</b> 收敛效度</a></li>
+<li class="chapter" data-level="2.2.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defb"><i class="fa fa-check"></i><b>2.2.2</b> 潜变量（因子）间相关性</a></li>
+<li class="chapter" data-level="2.2.3" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defc"><i class="fa fa-check"></i><b>2.2.3</b> 区别效度</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="strumodel.html"><a href="strumodel.html"><i class="fa fa-check"></i><b>3</b> 结构模型</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="strumodel.html"><a href="strumodel.html#strumodel-one"><i class="fa fa-check"></i><b>3.1</b> 研究假设</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="strumodel.html"><a href="strumodel.html#hypothesis1"><i class="fa fa-check"></i><b>3.1.1</b> 假设1</a></li>
+<li class="chapter" data-level="3.1.2" data-path="strumodel.html"><a href="strumodel.html#hypothesis2"><i class="fa fa-check"></i><b>3.1.2</b> 假设2</a></li>
+<li class="chapter" data-level="3.1.3" data-path="strumodel.html"><a href="strumodel.html#hypothesis3"><i class="fa fa-check"></i><b>3.1.3</b> 假设3</a></li>
+<li class="chapter" data-level="3.1.4" data-path="strumodel.html"><a href="strumodel.html#hypothesis4"><i class="fa fa-check"></i><b>3.1.4</b> 假设4</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="strumodel.html"><a href="strumodel.html#strumodel-xxx"><i class="fa fa-check"></i><b>3.2</b> 理论视角</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="strumodel.html"><a href="strumodel.html#strumodel-xxy"><i class="fa fa-check"></i><b>3.2.1</b> 文献综述</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="strumodel.html"><a href="strumodel.html#strumodel-two"><i class="fa fa-check"></i><b>3.3</b> 模型建构</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="mediator.html"><a href="mediator.html"><i class="fa fa-check"></i><b>4</b> 中介效果检验</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="mediator.html"><a href="mediator.html#mediator-station"><i class="fa fa-check"></i><b>4.1</b> 远程中介的效果检验</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="mediator.html"><a href="mediator.html#mediator-method"><i class="fa fa-check"></i><b>4.1.1</b> 操作</a></li>
+<li class="chapter" data-level="4.1.2" data-path="mediator.html"><a href="mediator.html#mediator-state"><i class="fa fa-check"></i><b>4.1.2</b> 解读</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="讨论与反思.html"><a href="讨论与反思.html"><i class="fa fa-check"></i>讨论与反思</a>
+<ul>
+<li class="chapter" data-level="4.2" data-path="讨论与反思.html"><a href="讨论与反思.html#counee"><i class="fa fa-check"></i><b>4.2</b> 国家治理</a>
+<ul>
+<li class="chapter" data-level="" data-path="讨论与反思.html"><a href="讨论与反思.html#国家的话语权力与个人自由意识"><i class="fa fa-check"></i>国家的话语权力与个人自由意识</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">官方媒体话语下的民族主义形成机制——基于Amos的实证分析</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="usage" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> 数据概况<a href="usage.html#usage" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="usage-ins" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> 数据预处理<a href="usage.html#usage-ins" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="usage-ons" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> 变量选取与缺失值处理<a href="usage.html#usage-ons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Amos无法对原始数据进行管理，一般情况下需要先用数据管理软件进行预处理。例如stata、spss和R语言。</p>
+<p>这里我们先用stata挑选出了感兴趣的观测变量，并使用最简单的缺失值处理方法：删除所有作为缺失值的观测样本。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="usage.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 注：以下为stata的代码格式，不可在R中使用！</span></span>
+<span id="cb1-2"><a href="usage.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># keep Q15_R13 Q15_R14 Q15_R16 Q15_R22 ///官方媒体</span></span>
+<span id="cb1-3"><a href="usage.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Q20_R9 Q20_R10 Q20_R11 ///规则型人格</span></span>
+<span id="cb1-4"><a href="usage.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Q23_R13 Q23_R14 Q23_R15 Q24_R15 ///威权观念</span></span>
+<span id="cb1-5"><a href="usage.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Q24_R4 Q24_R5 Q24_R6 Q24_R7 </span></span>
+<span id="cb1-6"><a href="usage.html#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="usage.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># save //需要保存后才能统一删除行缺失值</span></span>
+<span id="cb1-8"><a href="usage.html#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="usage.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># dropmiss, obs any //删除挑选变量中所有的缺失值</span></span>
+<span id="cb1-10"><a href="usage.html#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="usage.html#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># count //查看剩下多少样本量</span></span></code></pre></div>
+<p>原始数据的样本量一共为2379，进行特定变量的筛选并统一删除缺失值后，还剩下2149，数据缺失率为9.67%。</p>
+<p>以下R的代码是将外部图片插入到Rmd文件中，picture是在大项目中的存放图形的子文件夹，按这样的格式插入即可。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="usage.html#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/variable.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="picture/variable.png" alt="variable consequence" width="899" />
+<p class="caption">
+图1.1: variable consequence
+</p>
+</div>
+<p>以上为各测题及以它们为基础构建的因子。由于结构方程模型进行的是验证性因子分析，故已预设我们选取了需要的因子及其测题。</p>
+<p>一般而言是通过以下两种方式：</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>使用SPSS进行探索性因子分析</li>
+<li>具有强力的理论支撑</li>
+</ol>
+</blockquote>
+<p>为方便数据展示，现在导入R语言中查看数据情况。我们直接以stata的格式导入。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="usage.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span>
+<span id="cb3-2"><a href="usage.html#cb3-2" aria-hidden="true" tabindex="-1"></a>netizen <span class="ot">&lt;-</span> <span class="fu">read_stata</span>(<span class="st">&quot;eman.dta&quot;</span>)</span>
+<span id="cb3-3"><a href="usage.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(netizen)</span></code></pre></div>
+<pre><code>## # A tibble: 2,149 × 15
+##    Q15_R13       Q15_R14 Q15_R16 Q15_R22 Q20_R9  Q20_R10 Q20_R11 Q23_R13 Q23_R14
+##    &lt;dbl+lbl&gt;     &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt; &lt;dbl+l&gt;
+##  1 1 [几乎不使… 3 [经… 3 [经… 4 [几… 5 [非… 4 [比… 4 [比… 1 [强… 2 [反…
+##  2 1 [几乎不使… 1 [几… 2 [不… 1 [几… 4 [比… 3 [中… 4 [比… 3 [中… 3 [中…
+##  3 4 [几乎每天… 4 [几… 4 [几… 4 [几… 3 [中… 3 [中… 3 [中… 3 [中… 3 [中…
+##  4 3 [经常使用]… 3 [经… 3 [经… 3 [经… 4 [比… 4 [比… 4 [比… 4 [同… 4 [同…
+##  5 2 [不常使用]… 3 [经… 3 [经… 2 [不… 4 [比… 4 [比… 2 [不… 4 [同… 4 [同…
+##  6 1 [几乎不使… 1 [几… 1 [几… 1 [几… 1 [很… 3 [中… 5 [非… 3 [中… 3 [中…
+##  7 4 [几乎每天… 3 [经… 3 [经… 3 [经… 3 [中… 4 [比… 3 [中… 4 [同… 3 [中…
+##  8 2 [不常使用]… 2 [不… 2 [不… 2 [不… 4 [比… 4 [比… 4 [比… 2 [反… 3 [中…
+##  9 2 [不常使用]… 2 [不… 3 [经… 3 [经… 4 [比… 4 [比… 2 [不… 1 [强… 2 [反…
+## 10 3 [经常使用]… 3 [经… 4 [几… 3 [经… 4 [比… 5 [非… 3 [中… 3 [中… 4 [同…
+## # ℹ 2,139 more rows
+## # ℹ 6 more variables: Q23_R15 &lt;dbl+lbl&gt;, Q24_R4 &lt;dbl+lbl&gt;, Q24_R5 &lt;dbl+lbl&gt;,
+## #   Q24_R6 &lt;dbl+lbl&gt;, Q24_R7 &lt;dbl+lbl&gt;, Q24_R15 &lt;dbl+lbl&gt;</code></pre>
+</div>
+<div id="usage-pns" class="section level3 hasAnchor" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> 数据概况<a href="usage.html#usage-pns" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="usage.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
+<span id="cb5-2"><a href="usage.html#cb5-2" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(netizen)</span></code></pre></div>
+<table>
+<caption><span id="tab:unnamed-chunk-5">表1.1: </span>Data summary</caption>
+<tbody>
+<tr class="odd">
+<td align="left">Name</td>
+<td align="left">netizen</td>
+</tr>
+<tr class="even">
+<td align="left">Number of rows</td>
+<td align="left">2149</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of columns</td>
+<td align="left">15</td>
+</tr>
+<tr class="even">
+<td align="left">_______________________</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Column type frequency:</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">numeric</td>
+<td align="left">15</td>
+</tr>
+<tr class="odd">
+<td align="left">________________________</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Group variables</td>
+<td align="left">None</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable type: numeric</strong></p>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="13%" />
+<col width="18%" />
+<col width="6%" />
+<col width="6%" />
+<col width="4%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="6%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">skim_variable</th>
+<th align="right">n_missing</th>
+<th align="right">complete_rate</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">p0</th>
+<th align="right">p25</th>
+<th align="right">p50</th>
+<th align="right">p75</th>
+<th align="right">p100</th>
+<th align="left">hist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Q15_R13</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.07</td>
+<td align="right">0.94</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="left">▇▇▁▆▂</td>
+</tr>
+<tr class="even">
+<td align="left">Q15_R14</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.43</td>
+<td align="right">0.91</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="left">▃▇▁▇▂</td>
+</tr>
+<tr class="odd">
+<td align="left">Q15_R16</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.59</td>
+<td align="right">0.87</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="left">▂▆▁▇▃</td>
+</tr>
+<tr class="even">
+<td align="left">Q15_R22</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.36</td>
+<td align="right">0.89</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="left">▃▇▁▇▂</td>
+</tr>
+<tr class="odd">
+<td align="left">Q20_R9</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">3.41</td>
+<td align="right">0.95</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▁▃▅▇▂</td>
+</tr>
+<tr class="even">
+<td align="left">Q20_R10</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">3.53</td>
+<td align="right">0.99</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▁▂▃▇▂</td>
+</tr>
+<tr class="odd">
+<td align="left">Q20_R11</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">3.41</td>
+<td align="right">0.94</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▁▃▆▇▂</td>
+</tr>
+<tr class="even">
+<td align="left">Q23_R13</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.47</td>
+<td align="right">1.00</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">5</td>
+<td align="left">▂▇▅▂▁</td>
+</tr>
+<tr class="odd">
+<td align="left">Q23_R14</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.70</td>
+<td align="right">1.01</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">5</td>
+<td align="left">▂▇▇▃▁</td>
+</tr>
+<tr class="even">
+<td align="left">Q23_R15</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.95</td>
+<td align="right">1.11</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▃▆▇▇▂</td>
+</tr>
+<tr class="odd">
+<td align="left">Q24_R4</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">3.36</td>
+<td align="right">0.97</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▁▂▇▆▂</td>
+</tr>
+<tr class="even">
+<td align="left">Q24_R5</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">3.38</td>
+<td align="right">1.16</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▂▅▇▇▅</td>
+</tr>
+<tr class="odd">
+<td align="left">Q24_R6</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.99</td>
+<td align="right">1.18</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▃▅▇▆▃</td>
+</tr>
+<tr class="even">
+<td align="left">Q24_R7</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">3.46</td>
+<td align="right">1.08</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="left">▂▂▇▇▃</td>
+</tr>
+<tr class="odd">
+<td align="left">Q24_R15</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">2.59</td>
+<td align="right">1.04</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">5</td>
+<td align="left">▃▇▇▃▁</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="usage-writing" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> 描述统计<a href="usage.html#usage-writing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="usage-writing1" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> 官方媒体<a href="usage.html#usage-writing1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="0101-usage_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>由上图可看出，调查人群使用官方媒体的频次较低的人数要多于使用频次较高的人。</p>
+</div>
+<div id="usage-writing2" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> 规则型人格<a href="usage.html#usage-writing2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="0101-usage_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>由上图可看出，调查人群中自我规则服从性认可度高的人数明显多于认可度的人数。</p>
+</div>
+<div id="usage-writing3" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> 威权观念<a href="usage.html#usage-writing3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="0101-usage_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>由上图可看出，调查人群中威权观念较弱的人数多于威权观念较强的人。</p>
+</div>
+<div id="usage_writing4" class="section level3 hasAnchor" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> 民族主义<a href="usage.html#usage_writing4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="0101-usage_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>由上图可看出，调查人群中怀有民族主义的倾向比较明显。</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="obsmodel.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

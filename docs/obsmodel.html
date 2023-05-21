@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 测量模型 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析</title>
+  <meta name="description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 测量模型 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 测量模型 | 官方媒体话语下的民族主义形成机制——基于Amos的实证分析" />
+  
+  <meta name="twitter:description" content="这是我第一次用R的bookdown功能制作图书式的课程展示，输出格式为bookdown::gitbook和bookdown::pdf_book." />
+  
+
+<meta name="author" content="黄国政、黄婉岚、肖奕、李晓琳、林彦捷、朱雨彤" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="usage.html"/>
+<link rel="next" href="strumodel.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  jax: ["input/TeX","output/SVG"],
+  extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+  TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+  }
+});
+</script>
+<script type="text/javascript"
+   src="../../../MathJax/MathJax.js">
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="usage.html"><a href="usage.html"><i class="fa fa-check"></i><b>1</b> 数据概况</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="usage.html"><a href="usage.html#usage-ins"><i class="fa fa-check"></i><b>1.1</b> 数据预处理</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="usage.html"><a href="usage.html#usage-ons"><i class="fa fa-check"></i><b>1.1.1</b> 变量选取与缺失值处理</a></li>
+<li class="chapter" data-level="1.1.2" data-path="usage.html"><a href="usage.html#usage-pns"><i class="fa fa-check"></i><b>1.1.2</b> 数据概况</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="usage.html"><a href="usage.html#usage-writing"><i class="fa fa-check"></i><b>1.2</b> 描述统计</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="usage.html"><a href="usage.html#usage-writing1"><i class="fa fa-check"></i><b>1.2.1</b> 官方媒体</a></li>
+<li class="chapter" data-level="1.2.2" data-path="usage.html"><a href="usage.html#usage-writing2"><i class="fa fa-check"></i><b>1.2.2</b> 规则型人格</a></li>
+<li class="chapter" data-level="1.2.3" data-path="usage.html"><a href="usage.html#usage-writing3"><i class="fa fa-check"></i><b>1.2.3</b> 威权观念</a></li>
+<li class="chapter" data-level="1.2.4" data-path="usage.html"><a href="usage.html#usage_writing4"><i class="fa fa-check"></i><b>1.2.4</b> 民族主义</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="obsmodel.html"><a href="obsmodel.html"><i class="fa fa-check"></i><b>2</b> 测量模型</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-intro"><i class="fa fa-check"></i><b>2.1</b> 信度检验</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-standar"><i class="fa fa-check"></i><b>2.1.1</b> 参考标准</a></li>
+<li class="chapter" data-level="2.1.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-situation"><i class="fa fa-check"></i><b>2.1.2</b> 测量模型状况</a></li>
+<li class="chapter" data-level="2.1.3" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-summary"><i class="fa fa-check"></i><b>2.1.3</b> 信度汇总</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-def"><i class="fa fa-check"></i><b>2.2</b> 效度检验</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defa"><i class="fa fa-check"></i><b>2.2.1</b> 收敛效度</a></li>
+<li class="chapter" data-level="2.2.2" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defb"><i class="fa fa-check"></i><b>2.2.2</b> 潜变量（因子）间相关性</a></li>
+<li class="chapter" data-level="2.2.3" data-path="obsmodel.html"><a href="obsmodel.html#obsmodel-defc"><i class="fa fa-check"></i><b>2.2.3</b> 区别效度</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="strumodel.html"><a href="strumodel.html"><i class="fa fa-check"></i><b>3</b> 结构模型</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="strumodel.html"><a href="strumodel.html#strumodel-one"><i class="fa fa-check"></i><b>3.1</b> 研究假设</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="strumodel.html"><a href="strumodel.html#hypothesis1"><i class="fa fa-check"></i><b>3.1.1</b> 假设1</a></li>
+<li class="chapter" data-level="3.1.2" data-path="strumodel.html"><a href="strumodel.html#hypothesis2"><i class="fa fa-check"></i><b>3.1.2</b> 假设2</a></li>
+<li class="chapter" data-level="3.1.3" data-path="strumodel.html"><a href="strumodel.html#hypothesis3"><i class="fa fa-check"></i><b>3.1.3</b> 假设3</a></li>
+<li class="chapter" data-level="3.1.4" data-path="strumodel.html"><a href="strumodel.html#hypothesis4"><i class="fa fa-check"></i><b>3.1.4</b> 假设4</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="strumodel.html"><a href="strumodel.html#strumodel-xxx"><i class="fa fa-check"></i><b>3.2</b> 理论视角</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="strumodel.html"><a href="strumodel.html#strumodel-xxy"><i class="fa fa-check"></i><b>3.2.1</b> 文献综述</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="strumodel.html"><a href="strumodel.html#strumodel-two"><i class="fa fa-check"></i><b>3.3</b> 模型建构</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="mediator.html"><a href="mediator.html"><i class="fa fa-check"></i><b>4</b> 中介效果检验</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="mediator.html"><a href="mediator.html#mediator-station"><i class="fa fa-check"></i><b>4.1</b> 远程中介的效果检验</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="mediator.html"><a href="mediator.html#mediator-method"><i class="fa fa-check"></i><b>4.1.1</b> 操作</a></li>
+<li class="chapter" data-level="4.1.2" data-path="mediator.html"><a href="mediator.html#mediator-state"><i class="fa fa-check"></i><b>4.1.2</b> 解读</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="讨论与反思.html"><a href="讨论与反思.html"><i class="fa fa-check"></i>讨论与反思</a>
+<ul>
+<li class="chapter" data-level="4.2" data-path="讨论与反思.html"><a href="讨论与反思.html#counee"><i class="fa fa-check"></i><b>4.2</b> 国家治理</a>
+<ul>
+<li class="chapter" data-level="" data-path="讨论与反思.html"><a href="讨论与反思.html#国家的话语权力与个人自由意识"><i class="fa fa-check"></i>国家的话语权力与个人自由意识</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">官方媒体话语下的民族主义形成机制——基于Amos的实证分析</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="obsmodel" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> 测量模型<a href="obsmodel.html#obsmodel" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="obsmodel-intro" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> 信度检验<a href="obsmodel.html#obsmodel-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="obsmodel-standar" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> 参考标准<a href="obsmodel.html#obsmodel-standar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>选取和构造建构测量模型的观测变量和潜在变量后，根据以下几点参考标准，逐个对单独的测量模型进行检验。</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>观测变量与潜在变量之间的非标准化回归系数(regression weight)
+<ul>
+<li>是否显著。</li>
+</ul></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>观测变量与潜在变量之间的标准化回归系数(standardized regression weight)
+<ul>
+<li>是否在(-1,1)之间，不在则存在共线性问题。<br />
+</li>
+<li>标准化因子载荷量大小，参考值较好为0.7以上，宽松范围0.5以上。</li>
+</ul></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>模型绝对适配度（model fit），包括卡方值、卡方自由比、GFI、AGFI与Rmsea值
+<ul>
+<li>卡方自由比范围：(1,3)，宽松范围(1,5)</li>
+<li>GFI参考范围：期望&gt;0.90</li>
+<li>AGFI参考范围：期望&gt;0.90</li>
+<li>Rmsea参考范围：期望&lt;0.08，若介于0.08~0.10，模型适配度尚可</li>
+</ul></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>变量的方差及残差是否为负数.</li>
+</ol>
+</blockquote>
+</div>
+<div id="obsmodel-situation" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> 测量模型状况<a href="obsmodel.html#obsmodel-situation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="官方媒体测量模型情况" class="section level4 unnumbered hasAnchor">
+<h4>官方媒体测量模型情况<a href="obsmodel.html#官方媒体测量模型情况" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="obsmodel.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/obsmodel1.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="picture/obsmodel1.png" alt="obsmodel1" width="759" />
+<p class="caption">
+图2.1: obsmodel1
+</p>
+</div>
+</div>
+<div id="规则型人格测量模型情况" class="section level4 unnumbered hasAnchor">
+<h4>规则型人格测量模型情况<a href="obsmodel.html#规则型人格测量模型情况" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="obsmodel.html#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/obsmodel2.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="picture/obsmodel2.png" alt="obsmodel2" width="724" />
+<p class="caption">
+图2.2: obsmodel2
+</p>
+</div>
+</div>
+<div id="威权观念测量模型情况" class="section level4 unnumbered hasAnchor">
+<h4>威权观念测量模型情况<a href="obsmodel.html#威权观念测量模型情况" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="obsmodel.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/obsmodel3.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="picture/obsmodel3.png" alt="obsmodel3" width="743" />
+<p class="caption">
+图2.3: obsmodel3
+</p>
+</div>
+</div>
+<div id="民族主义测量模型情况" class="section level4 unnumbered hasAnchor">
+<h4>民族主义测量模型情况<a href="obsmodel.html#民族主义测量模型情况" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="obsmodel.html#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/obsmodel4.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="picture/obsmodel4.png" alt="obsmodel4" width="718" />
+<p class="caption">
+图2.4: obsmodel4
+</p>
+</div>
+<p>单个测量模型内非标准化系数都达到显著、标准化回归系数都在(-1,1)之间，方差和残差都为负，没有违反统计规律。个别测量模型标准化因子载荷量较低，卡方自由比较大，但总体都符合要求。</p>
+</div>
+</div>
+<div id="obsmodel-summary" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> 信度汇总<a href="obsmodel.html#obsmodel-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>下一步计算各测量模型的组合信度如下表汇总。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="obsmodel.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/CR.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="picture/CR.png" alt="CR" width="578" />
+<p class="caption">
+图2.5: CR
+</p>
+</div>
+<p>各测量模型信度检验通过，下一步检验测量模型效度。</p>
+</div>
+</div>
+<div id="obsmodel-def" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> 效度检验<a href="obsmodel.html#obsmodel-def" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="obsmodel-defa" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> 收敛效度<a href="obsmodel.html#obsmodel-defa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>各测量模型的收敛效度（平均变异数抽取量）如下表汇总，可使用计算出的收敛效度进一步求出其开根号值。收敛效度（平均变异数抽取量）的开根号值可反映潜变量（因子）与构建自身的测题的信息重合度。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="obsmodel.html#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/AVE.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="picture/AVE.png" alt="AVE" width="683" />
+<p class="caption">
+图2.6: AVE
+</p>
+</div>
+</div>
+<div id="obsmodel-defb" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> 潜变量（因子）间相关性<a href="obsmodel.html#obsmodel-defb" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>给各潜变量（因子）进行相关性检验。</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>检查潜变量（因子）之间是否具有共线性</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>进行潜变量（因子）之间的区别效度检验</li>
+</ol>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="obsmodel.html#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/correlation.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<img src="picture/correlation.png" alt="correlation" width="1050" />
+<p class="caption">
+图2.7: correlation
+</p>
+</div>
+</div>
+<div id="obsmodel-defc" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> 区别效度<a href="obsmodel.html#obsmodel-defc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>基于收敛效度与潜变量（因子）之间的相关性，可得出潜变量（因子）之间区别效度的情况，列出表格如下。</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="obsmodel.html#cb8-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;picture/discriminant validity.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="picture/discriminant%20validity.png" alt="discriminant validity" width="595" />
+<p class="caption">
+图2.8: discriminant validity
+</p>
+</div>
+<p>各测量模型组成信度、收敛效度与区别效度通过，测量模型检验通过，可建构结构模型。</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="usage.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="strumodel.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["CBook.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
